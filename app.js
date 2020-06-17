@@ -29,11 +29,11 @@ app.listen(3000, function() {
 });
 
 app.get("/", function(req, res) {
-  res.render("home")
+  res.render("home");
 });
 
 app.get("/login", function(req, res) {
-  res.render("login")
+  res.render("login");
 });
 
 app.post("/login", function(req, res) {
@@ -54,7 +54,7 @@ app.post("/login", function(req, res) {
 });
 
 app.get("/register", function(req, res) {
-  res.render("register")
+  res.render("register");
 });
 
 app.post("/register", function(req, res) {
@@ -67,14 +67,14 @@ app.post("/register", function(req, res) {
 
     newUser.save(function(err) {
       if (!err) {
-        res.render("secrets")
+        res.render("secrets");
       } else {
-        res.send(err)
+        res.send(err);
       }
     });
   });
 });
 
 app.get("/logout", function(req, res) {
-  res.redirect("/")
+  res.redirect("/");
 })
